@@ -12,3 +12,9 @@ const AffichageRecette = () => {
           <img src={recette.imageUrl} alt={recette.title} />
           <p>{recette.description}</p>
         </div>
+      ))}
+    </div>
+  );
+};
+
+export default AffichageRecette;
