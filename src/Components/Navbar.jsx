@@ -146,3 +146,8 @@ export default function Example() {
               ))}
             </div>
           </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
+  )
+}
