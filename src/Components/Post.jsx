@@ -15,3 +15,12 @@ const RecipeImage = () => {
     fetchRecipes();
   }, []);
 
+  return (
+    <div>
+      {recipes.map(recipe => (
+        <img key={recipe.id} src={recipe.imageUrl} alt={recipe.title} />
+      ))}
+    </div>
+  );
+};
+
