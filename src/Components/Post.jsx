@@ -24,3 +24,4 @@ const RecipeImage = () => {
   );
 };
 
+export default RecipeImage;
