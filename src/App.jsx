@@ -5,3 +5,10 @@ import Navbar from "./Components/Navbar"
 import Bar from "./Components/Search"
 import Post from "./Components/Post"
 
+
+function App() {
+ 
+
+  return (
+    <>
+    
