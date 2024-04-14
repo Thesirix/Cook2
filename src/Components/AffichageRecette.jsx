@@ -1,20 +1,17 @@
-import  { useState } from 'react';
-import recettes from "../assets/data/recettes.json";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Post from './Post';
 
-const AffichageRecette = () => {
-  const [recettesState, setRecettesState] = useState(recettes);
-
+const AffichageRecette = ({ recette }) => {
   return (
     <div>
-      {recettesState.map((recette) => (
-        <div key={recette.id}>
-          <h2>{recette.title}</h2>
-          <img src={recette.imageUrl} alt={recette.title} />
-          <p>{recette.description}</p>
-        </div>
+      {recette.map((recette) => (
+        <Post key={recette.id} recette={recette} />
       ))}
     </div>
   );
 };
+
+
 
 export default AffichageRecette;
