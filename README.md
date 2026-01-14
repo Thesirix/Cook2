@@ -1,34 +1,33 @@
-# React + Vite
+# 🍳 Cook2 - Recipe Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a website built using **React** that allows users to search for and view cooking recipes. It features a modular code organization using several React components.
 
-# Site de Recettes de Cuisine
+## 📂 Project Structure
 
-Ce projet est un site web créé en utilisant React, qui permet aux utilisateurs de rechercher des recettes de cuisine et de les afficher. Il comprend plusieurs composants React pour une organisation modulaire du code.
+The project is organized as follows:
 
-## Structure du Projet
+- **`App.jsx`**: 🧠 This component is the application's entry point. It contains the main logic, including global state management and the rendering of other components.
+- **`Search.jsx`**: 🔍 Represents the search bar allowing users to look for recipes. It contains an input field where users can enter their search queries.
+- **`Post.jsx`**: 🍲 Responsible for displaying cooking recipes. It receives recipe data as properties (props) and displays them as cards. Additionally, it uses a filter bar and a favorites system to manage the list of displayed recipes.
+- **`Navbar.jsx`**: 🧭 Represents the site's navigation bar. It contains links to different sections of the website.
+- **`Footer.jsx`**: 👣 Represents the site's footer. It may contain information about the author, links to social media, etc.
 
-Le projet est organisé comme suit :
+## 🚀 Installation
 
-- `App.jsx`: Ce composant est le point d'entrée de l'application. Il contient la logique principale de l'application, notamment la gestion de l'état global et le rendu des autres composants.
-- `Search.jsx`: Ce composant représente la barre de recherche permettant aux utilisateurs de rechercher des recettes de cuisine. Il contient un champ de saisie où les utilisateurs peuvent entrer leur requête de recherche.
-- `Post.jsx`:Ce composant est responsable de l'affichage des recettes de cuisine. Il reçoit les données des recettes en tant que propriétés et les affiche sous forme de cartes. De plus, il utilise une barre de filtre et un système de favoris pour recréer la liste des recettes affichées.
-- `Navbar.jsx`: Ce composant représente la barre de navigation du site. Il contient des liens vers différentes sections du site.
-- `Footer.jsx`: Ce composant représente le pied de page du site. Il peut contenir des informations sur l'auteur du site, des liens vers les médias sociaux, etc.
+Follow these steps to run the project locally:
 
-## Installation
+1.  **Clone the repository** to your local machine.
+2.  **Prerequisites:** Make sure you have **Node.js** installed on your machine.
+3.  **Install dependencies:** In the project directory, run the following command:
 
-1. Cloner ce dépôt sur votre machine locale.
-2. Assurez-vous d'avoir Node.js installé sur votre machine.
-3. Dans le répertoire du projet, exécutez `npm install` pour installer toutes les dépendances.
-4. Ensuite, lancez l'application en exécutant `npm start`.
-5. Ouvrez votre navigateur et accédez à l'adresse `http://localhost:3000` pour voir le site en action.
+    ```bash
+    npm install
+    ```
 
+4.  **Start the application:** Launch the app by running:
 
+    ```bash
+    npm start
+    ```
 
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Cook2
+5.  **View the site:** Open your browser and navigate to `http://localhost:3000` to see the site in action.
