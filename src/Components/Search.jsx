@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
-import { HeartIcon } from '@heroicons/react/24/solid';
+import PropTypes from 'prop-types';
+import { MagnifyingGlassIcon, HeartIcon } from '@heroicons/react/24/solid';
 
 function Bar({ onSearch, showFavorites, onReset }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -8,10 +8,6 @@ function Bar({ onSearch, showFavorites, onReset }) {
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
     onSearch(event.target.value);
-  };
-
-  const handleShowFavoritesClick = () => {
-    showFavorites();
   };
 
   const handleResetClick = () => {
@@ -34,20 +30,33 @@ function Bar({ onSearch, showFavorites, onReset }) {
             name="search"
             value={searchTerm}
             onChange={handleChange}
-            style={{ minWidth: '1350px' }} // Utilisez minWidth pour garantir une largeur minimale
+            style={{ minWidth: '1350px' }}
           />
         </label>
 
-        <button className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded" onClick={handleShowFavoritesClick}>
+        <button
+          className="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded"
+          onClick={showFavorites}
+          aria-label="Afficher les favoris"
+        >
           <HeartIcon className="h-6 w-6 text-gray-500" />
         </button>
 
-        <button className="min-w-16 text-center px-4 py-2 text-white font-semibold rounded-md transition-colors duration-300 bg-red-800 hover:bg-red-700" onClick={handleResetClick}>
+        <button
+          className="min-w-16 text-center px-4 py-2 text-white font-semibold rounded-md transition-colors duration-300 bg-red-800 hover:bg-red-700"
+          onClick={handleResetClick}
+        >
           Reset
         </button>
       </div>
     </div>
   );
 }
+
+Bar.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+  showFavorites: PropTypes.func.isRequired,
+  onReset: PropTypes.func.isRequired,
+};
 
 export default Bar;
