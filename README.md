@@ -1,33 +1,54 @@
-# 🍳 Cook2 - Recipe Website
+# Let's Cook - Site de Recettes
 
-This project is a website built using **React** that allows users to search for and view cooking recipes. It features a modular code organization using several React components.
+Un site web de recettes de cuisine construit avec **React** et **Tailwind CSS**, permettant aux utilisateurs de rechercher, consulter et mettre en favoris des recettes.
 
-## 📂 Project Structure
+## Fonctionnalités
 
-The project is organized as follows:
+- Recherche de recettes en temps réel
+- Système de favoris par recette
+- Interface responsive (mobile & desktop)
+- Affichage de la difficulté, de l'auteur et de la description
 
-- **`App.jsx`**: 🧠 This component is the application's entry point. It contains the main logic, including global state management and the rendering of other components.
-- **`Search.jsx`**: 🔍 Represents the search bar allowing users to look for recipes. It contains an input field where users can enter their search queries.
-- **`Post.jsx`**: 🍲 Responsible for displaying cooking recipes. It receives recipe data as properties (props) and displays them as cards. Additionally, it uses a filter bar and a favorites system to manage the list of displayed recipes.
-- **`Navbar.jsx`**: 🧭 Represents the site's navigation bar. It contains links to different sections of the website.
-- **`Footer.jsx`**: 👣 Represents the site's footer. It may contain information about the author, links to social media, etc.
+## Structure du projet
 
-## 🚀 Installation
+| Fichier | Rôle |
+|---|---|
+| `App.jsx` | Composant racine, gestion de l'état global |
+| `Components/Navbar.jsx` | Barre de navigation |
+| `Components/Search.jsx` | Barre de recherche et filtres |
+| `Components/Post.jsx` | Grille d'affichage des recettes |
+| `Components/Footer.jsx` | Pied de page avec appel à l'action |
+| `assets/data/recettes.json` | Données des recettes |
 
-Follow these steps to run the project locally:
+## Technologies
 
-1.  **Clone the repository** to your local machine.
-2.  **Prerequisites:** Make sure you have **Node.js** installed on your machine.
-3.  **Install dependencies:** In the project directory, run the following command:
+- [React 18](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Headless UI](https://headlessui.com/)
+- [Heroicons](https://heroicons.com/)
+- [Vite](https://vitejs.dev/)
 
-    ```bash
-    npm install
-    ```
+## Installation
 
-4.  **Start the application:** Launch the app by running:
+```bash
+# Cloner le dépôt
+git clone <url-du-repo>
+cd Cook2
 
-    ```bash
-    npm start
-    ```
+# Installer les dépendances
+npm install
 
-5.  **View the site:** Open your browser and navigate to `http://localhost:3000` to see the site in action.
+# Lancer en développement
+npm run dev
+```
+
+Ouvrir [http://localhost:5173](http://localhost:5173) dans le navigateur.
+
+```bash
+# Build de production
+npm run build
+```
+
+## Licence
+
+MIT
